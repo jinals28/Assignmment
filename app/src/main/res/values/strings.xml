@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Links Demo</string>
+    <string name="title_home">Links</string>
+    <string name="title_courses">Courses</string>
+    <string name="title_campaigne">Campaigne</string>
+    <string name="title_profile">Profile</string>
+    <string name="name">Jinal Shah</string>
+</resources>

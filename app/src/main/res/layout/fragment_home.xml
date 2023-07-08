@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_blue">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/color_blue">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="left"
+                android:text="Dashboard"
+                android:layout_margin="20sp"
+                android:textColor="@color/white"
+                android:textSize="30sp">
+            </TextView>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:src="@drawable/baseline_settings_24"
+                android:backgroundTint="#26FFFFFF"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:orientation="vertical"
+                    android:padding="10sp">
+
+                    <TextView
+                        android:id="@+id/greeting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:gravity="left"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="left"
+                        android:text="@string/name"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="10dp"
+                        android:padding="10dp">
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/lineChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:elevation="5dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:showDividers="middle"
+                            android:divider="@android:color/transparent"
+                            android:layout_marginTop="15dp">
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:padding="5sp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:padding="2sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:src="@drawable/baseline_ads_click_24" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="123"
+                                        android:id="@+id/txtTodayClicks"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Today's Clicks"
+                                        android:fontFamily="@font/amiko"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textSize="15sp"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:padding="5sp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:padding="2sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:src="@drawable/baseline_location_on_24"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ahmedabad"
+                                        android:maxLength="8"
+                                        android:id="@+id/txtTopLocation"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Top Location"
+                                        android:fontFamily="@font/amiko"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textSize="15sp"/>
+
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:padding="5sp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:padding="2sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:src="@drawable/baseline_whatshot_24"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Instagram"
+                                        android:id="@+id/txtTopSource"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Top Source"
+                                        android:fontFamily="@font/amiko"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textSize="15sp"/>
+
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:padding="5sp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:padding="2sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:src="@drawable/baseline_access_time_24"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="11:00-12:00"
+                                        android:id="@+id/txtBestTime"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Best Time"
+                                        android:fontFamily="@font/amiko"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginStart="5dp"
+                                        android:textSize="15sp"/>
+
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10sp">
+
+                        <include layout="@layout/custom_tab"
+                            android:id="@+id/customTab"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageButton
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="?android:attr/actionModeWebSearchDrawable"
+                            android:background="@drawable/bg_todayclicks"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recyclerView"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
